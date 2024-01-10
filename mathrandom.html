@@ -6,8 +6,27 @@
     <title>Funker disse git-greiene?? Eller er det bare tull?</title>
   </head>
   <body>
-    <p>Dette er en forandring</p>
-    <p>Forandring</p>
-    <h1>Jeg kan forandre masse!</h1>
+    <input
+      type="button"
+      class="random-number-btn"
+      value="Vis tilfeldig tall!"
+    />
+    <p id="random-number-txt"></p>
+    <script>
+      const randomNumberBtn = document.querySelector(".random-number-btn");
+      const randomNumberTxt = document.querySelector("#random-number-txt");
+
+      randomNumberBtn.onclick = showRandomNumber;
+
+      function showRandomNumber() {
+        randomNumberTxt.innerHTML = generateRandomNumber();
+      }
+
+      function generateRandomNumber() {
+        let randomNumber = Math.floor(Math.random() * 10);
+
+        return randomNumber;
+      }
+    </script>
   </body>
 </html>
