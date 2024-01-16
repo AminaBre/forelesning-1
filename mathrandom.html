@@ -19,13 +19,13 @@
       randomNumberBtn.onclick = showRandomNumber;
 
       function showRandomNumber() {
-        randomNumberTxt.innerHTML = generateRandomNumber();
+        randomNumberTxt.innerHTML = createRandomNumber();
       }
 
-      function generateRandomNumber() {
-        let randomNumber = Math.floor(Math.random() * 10);
+      function createRandomNumber() {
+        let randomNumberBetween0And10 = Math.floor(Math.random() * 10);
 
-        return randomNumber;
+        return randomNumberBetween0And10;
       }
     </script>
   </body>
